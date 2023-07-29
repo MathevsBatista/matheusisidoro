@@ -120,6 +120,15 @@ body {
     font-family: 'overpass', sans-serif;
 }
 
+.opacity {
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    right: 0;
+}
+
 header {
     border-bottom: 0.01rem solid rgba(91, 91, 92, 0.10);
 }
@@ -275,10 +284,6 @@ header, footer {
         display: block;
     }
 
-    .opacity {
-        display: none;
-    }
-
     .nav-menu {
         left: -100%;
         display: none;
@@ -298,24 +303,22 @@ header, footer {
     }
 
     .nav-menu.active {
-        position: fixed;
         display: flex;
+        position: fixed;
         flex-direction: column;
         height: 100%;
         padding-top: 5rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
         top: 0;
         left: 0;
     }
 
+    .nav-menu {
+        padding-left: 0.83rem;
+        padding-right: 0.83rem;
+    }
+
     .opacity.active {
         display: block;
-        position: fixed;
-        background-color: rgba(0, 0, 0, 0.5);
-        height: 100%;
-        width: 100%;
-        right: 0;
     }
 }
 
@@ -331,8 +334,8 @@ header, footer {
     }
 
     .nav-menu {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+        padding-left: 0.33rem;
+        padding-right: 0.33rem;
     }
 }
 
