@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 
-<html lang="pt-BR">
+<html lang="$language$">
     
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
-        <title>$title</title>
+        <meta name="date" content='$date-meta$'>
+        <title>$title$</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body>
+        <div class="opacity">
+        </div>
+
         <header>
             <div class="topbar">
                 <div class="logo">
@@ -17,9 +21,19 @@
                 </div>
 
                 <nav>
-                    <ul>
-                        <li><a href="">Escritos</a></li>
-                        <li><a href="">Projetos</a></li>
+                    <button class="burger-container" type="button" aria-controls="nav-menu" aria-expanded="false">
+                        <img class="burger" alt="menu" src="images/burger-menu.svg"/>
+                    </button>
+
+                    <ul class="nav-menu">
+                        <div class="logo">
+                            <a href="index.html">Matheus<br>Isidoro</a>
+                        </div>
+
+                        <li class="nav-item"><a href="">Escritos</a></li>
+                        <li class="nav-item"><a href="">Projetos</a></li>
+                        <li class="nav-item"><a href="">Sobre Mim</a></li>
+                        <li class="nav-item"><a href="">Contato</a></li>
                     </ul>
                 </nav>
             </div>
@@ -27,6 +41,7 @@
 
         <main class="main">
             <article>
+                $body$
             </article>
 
             <aside class="sidebar">
@@ -47,6 +62,7 @@
             <p>Feito por <a href="https://github.com/MathevsBatista">Mathevs Batista</a></p>
         </footer>
 
+        <script src="script.js"></script>
     </body>
 
 </html>

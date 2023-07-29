@@ -207,14 +207,20 @@ article {
 }
 
 h1 {
+    margin-bottom: 0.5rem;
     font-size: 2rem;
     line-height: 2.25rem;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     padding-top: 0.3rem;
-    text-align: center;
+}
+
+h4 {
+    margin-top: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 500;
 }
 
 p {
