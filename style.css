@@ -1,70 +1,368 @@
 @font-face {
-  font-family: 'JetBrains Mono';
-  src: url('fonts/JetBrainsMono-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'overpass';
+    src: url('fonts/Overpass-Thin.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'JetBrains Mono';
-  src: url('fonts/JetBrainsMono-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
+    font-family: 'overpass';
+    src: url('fonts/Overpass-ThinItalic.woff2') format('woff2');
+    font-weight: 200;
+    font-style: italic;
 }
 
 @font-face {
-  font-family: 'JetBrains Mono';
-  src: url('fonts/JetBrainsMono-Italic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
+    font-family: 'overpass';
+    src: url('fonts/Overpass-ExtraLight.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'JetBrains Mono';
-  src: url('fonts/JetBrainsMono-BoldItalic.ttf') format('truetype');
-  font-weight: bold;
-  font-style: italic;
+    font-family: 'overpass';
+    src: url('fonts/Overpass-ExtraLightItalic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
 }
 
 @font-face {
-  font-family: 'JetBrains Mono Thin';
-  src: url('fonts/JetBrainsMono-Thin.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'overpass';
+    src: url('fonts/Overpass-Light.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
 }
 
-/* styles */
-@media (prefers-color-scheme: dark) {
-    body {
-        color: #C9D1D9;
-        background: #0D1117;
-    }
+@font-face {
+    font-family: 'overpass';
+    src: url('fonts/Overpass-LightItalic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+}
 
-    a {
-        color: skyblue;
-    }
+@font-face {
+    font-family: 'overpass';
+    src: url('fonts/Overpass-Regular.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'overpass';
+    src: url('fonts/Overpass-Italic.woff2') format('woff2');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'overpass';
+    src: url('fonts/Overpass-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'overpass';
+    src: url('fonts/Overpass-SemiBoldItalic.woff2') format('woff2');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'overpass';
+    src: url('fonts/Overpass-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'overpass';
+    src: url('fonts/Overpass-BoldItalic.woff2') format('woff2');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'overpass';
+    src: url('fonts/Overpass-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'overpass';
+    src: url('fonts/Overpass-ExtraBoldItalic.woff2') format('woff2');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'overpass';
+    src: url('fonts/Overpass-Heavy.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'overpass';
+    src: url('fonts/Overpass-HeavyItalic.woff2') format('woff2');
+    font-weight: 900;
+    font-style: italic;
 }
 
 body {
-    font-family: 'JetBrains Mono', sans-serif;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: #2e3436;
+    background-color: #f9fafb;
+    margin: 0;
+    font-family: 'overpass', sans-serif;
 }
 
-ul {
+header {
+    border-bottom: 0.01rem solid rgba(91, 91, 92, 0.10);
+}
+
+header a {
+    color: #2e3436;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80rem;
+    padding: 0.5rem 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    display: flex;
+    text-align: center;
+    font-size: 21px;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+}
+
+nav {
+    display: flex;
+}
+
+nav button {
+    
+}
+
+.burger-container {
+    display: none;
+}
+
+.burger {
+    height: 30px; 
+}
+
+.nav-menu .logo {
+    display: none;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     list-style: none;
+    margin: 0;
     padding: 0;
 }
 
-li {
-    border: 0 solid #C9D1D9;
-    border-left-width: 2px;
-    padding-left: 1rem;
+.nav-item {
+    font-size: 18px;
 }
 
-li:not(:last-child) {
-    padding-bottom: .5rem;
+main {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+article {
+    max-width: 650px;
+    border: 0.01rem solid rgba(91, 91, 92, 0.10);
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+h1 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    padding-top: 0.3rem;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
 }
 
 a {
     text-decoration: none;
 }
 
+aside {
+    display: flex;
+    padding: 2rem;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside li {
+    border: 0 solid #C9D1D9;
+    border-left-width: 2px;
+    padding-left: 1rem;
+    font-size: 16px;
+}
+
+aside li:not(:last-child) {
+    padding-bottom: .5rem;
+}
+
+footer {
+    display: flex;
+    bottom: 0;
+    font-size: 18px;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+
+    border-top: 0.01rem solid rgba(91, 91, 92, 0.10);
+}
+
+header, footer {
+    background-color: #ffffff;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 1080px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .topbar {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 770px) {
+    .topbar {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .burger-container {
+        display: block;
+    }
+
+    .opacity {
+        display: none;
+    }
+
+    .nav-menu {
+        left: -100%;
+        display: none;
+    }
+
+    .nav-menu .logo {
+        display: block;
+        position: fixed;
+        padding: 0.5rem 0;
+        top: 0;
+    }
+
+    .nav-menu .logo a {
+        font-size: 21px;
+        font-weight: 900;
+        letter-spacing: -0.03em;
+    }
+
+    .nav-menu.active {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding-top: 5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        top: 0;
+        left: 0;
+    }
+
+    .opacity.active {
+        display: block;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 100%;
+        width: 100%;
+        right: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .topbar {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .navigation-logo {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .nav-menu {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
+
+/* styles */
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #C9D1D9;
+        background-color: #0D1117;
+    }
+
+    a {
+        color: skyblue;
+    }
+
+    article {
+        border: 0.01rem solid rgba(91, 91, 92, 0.10);
+        background-color: #12151b;
+    }
+
+    header a {
+        color: #d1d5db;
+    }
+
+    header, footer {
+        background-color: #0D1117;
+    }
+
+    @media (max-width: 770px) {
+        .nav-menu {
+            background-color: #141a24;
+        }
+    }
+}
