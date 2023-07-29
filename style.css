@@ -113,11 +113,13 @@
 body {
     display: flex;
     flex-direction: column;
-    position: relative;
+    position: absolute;
+    justify-content: space-between;
     color: #2e3436;
     background-color: #f9fafb;
     margin: 0;
     font-family: 'overpass', sans-serif;
+    height: 100%
 }
 
 .opacity {
@@ -177,7 +179,6 @@ nav button {
 
 .nav-menu {
     display: flex;
-    align-items: center;
     gap: 1rem;
     list-style: none;
     margin: 0;
@@ -246,6 +247,7 @@ aside li:not(:last-child) {
 
 footer {
     display: flex;
+    position: relative;
     bottom: 0;
     font-size: 18px;
     justify-content: center;
@@ -313,12 +315,16 @@ header, footer {
     }
 
     .nav-menu {
-        padding-left: 0.83rem;
-        padding-right: 0.83rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     .opacity.active {
         display: block;
+    }
+
+    .nav-menu {
+        background-color: #ffffff;
     }
 }
 
@@ -334,8 +340,8 @@ header, footer {
     }
 
     .nav-menu {
-        padding-left: 0.33rem;
-        padding-right: 0.33rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
 }
 
