@@ -96,20 +96,6 @@
     font-style: italic;
 }
 
-@font-face {
-    font-family: 'overpass';
-    src: url('fonts/Overpass-Heavy.woff2') format('woff2');
-    font-weight: 900;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'overpass';
-    src: url('fonts/Overpass-HeavyItalic.woff2') format('woff2');
-    font-weight: 900;
-    font-style: italic;
-}
-
 body {
     display: flex;
     flex-direction: column;
@@ -162,10 +148,6 @@ nav {
     display: flex;
 }
 
-nav button {
-    
-}
-
 .burger-container {
     display: none;
 }
@@ -196,10 +178,12 @@ main {
     margin: 2rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
+    height: 100vh;
 }
 
 article {
     max-width: 650px;
+    box-sizing: border-box;
     border: 0.01rem solid rgba(91, 91, 92, 0.10);
     background-color: #ffffff;
     padding: 2rem;
@@ -207,20 +191,24 @@ article {
 }
 
 h1 {
-    margin-bottom: 0.5rem;
     font-size: 2rem;
-    line-height: 2.25rem;
 }
 
 h2 {
     font-size: 1.75rem;
-    padding-top: 0.3rem;
 }
 
 h4 {
-    margin-top: 0.5rem;
     font-size: 1.25rem;
     font-weight: 500;
+}
+
+article h1 {
+    margin-block-end: 0.5rem;
+}
+
+article h4 {
+    margin-block-start: 0.5rem;
 }
 
 p {
@@ -337,6 +325,20 @@ header, footer {
 }
 
 @media (max-width: 640px) {
+    article {
+        padding: 1.5rem;
+    }
+
+    main {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+    blockquote {
+        margin-inline-start: 1.5rem;
+        margin-inline-end: 1.5rem;
+    }
+
     .topbar {
         padding-left: 0.5rem;
         padding-right: 0.5rem;
