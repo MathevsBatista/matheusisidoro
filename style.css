@@ -174,11 +174,11 @@ nav {
 
 main {
     display: flex;
+    flex: 1;
     justify-content: space-evenly;
     margin: 2rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    height: inherit;
 }
 
 article {
